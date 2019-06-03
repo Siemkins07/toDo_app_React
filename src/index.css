@@ -1,3 +1,8 @@
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(./images/bg.jpg);
   background-repeat: no-repeat;

@@ -1,0 +1,21 @@
+.taskActive button,
+.taskDone button {
+    background-color: orange;
+    border-radius: 2px;
+    border: none;
+    margin: 0 5px;
+    color: white;
+    transition: 0.4s;
+    font-size: 16px;
+}
+
+.taskDone button {
+    font-size: 10px;
+    margin-right: 0;
+}
+
+.taskActive button:hover,
+.taskDone button:hover {
+    color: rgb(15, 163, 177);
+    background-color: white;
+}

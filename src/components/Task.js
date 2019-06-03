@@ -1,19 +1,20 @@
 import React from 'react';
+import './Task.css';
 
 const Task = (props) => {
 
     const style = {
-        color: 'red'
+        color: 'orange'
     }
     const { text, date, id, active, important, finishDate } = props.task;
 
     if (active) {
         return (
-            <div>
+            <div className='taskActive'>
                 <p>
-                    <strong style={important ? style : null}>{text}</strong> - do <span>{date} </span>
+                    <strong style={important ? style : null}>{text}</strong> | <span>{date} </span>
                     <button onClick={() => props.done(id)}
-                    >Zostało zrobione</button>
+                    >Pyk!</button>
                     <button onClick={() => props.delete(id)}>X</button>
                 </p>
             </div>
@@ -22,11 +23,10 @@ const Task = (props) => {
         const finish = new Date(finishDate).toLocaleString()
 
         return (
-            <div>
+            <div className="taskDone">
                 <p>
-                    <strong>{text}</strong> <em>(zrobić do{date})</em><br />
-                    - potwierdzenie wykonania <span>{finish} </span>
-
+                    <strong>{text}</strong> <em>(do {date})</em><br />
+                    - wykonano <span>{finish} </span>
                     <button onClick={() => props.delete(id)}>X</button>
                 </p>
             </div>

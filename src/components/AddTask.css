@@ -1,11 +1,20 @@
-input {
+.form input {
     margin: 10px;
     padding: 5px 10px;
     font-size: 20px;
+    border-radius: 6px;
 }
 
 .form button {
     padding: 10px 20px;
     font-size: 20px;
-    ;
+    background-color: white;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.form button:hover {
+    background-color: #0FA3B1;
+    color: white;
 }

@@ -39,7 +39,7 @@ class AddTask extends Component {
                 })
             }
         } else {
-            console.log('za mało znaków');
+            alert("Opis zadania to minimum 3 znaki");
         }
     }
 
@@ -52,11 +52,11 @@ class AddTask extends Component {
             <div className='form'>
                 <input type="text" placeholder='Dodaj zadanie' value={this.state.text} onChange={this.handleText} />
                 <input type="checkbox" checked={this.state.checked} id="important" onChange={this.handleCheckbox} />
-                <label htmlFor="important">Priorytet</label>
+                <label style={{ color: "orange" }} htmlFor="important">Priorytet</label>
                 <br />
-                <label htmlFor="date">Do kiedy</label>
+                <label htmlFor="date"></label>
                 <input type="date" value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handleDate} />
-                <button onClick={this.handleClick}>OK</button>
+                <button onClick={this.handleClick}>Dam radę!</button>
             </div>
         );
     }
