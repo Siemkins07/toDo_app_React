@@ -52,7 +52,7 @@ class AddTask extends Component {
             <div className='form'>
                 <input type="text" placeholder='Dodaj zadanie' value={this.state.text} onChange={this.handleText} />
                 <input type="checkbox" checked={this.state.checked} id="important" onChange={this.handleCheckbox} />
-                <label style={{ color: "orange" }} htmlFor="important">Priorytet</label>
+                <label style={{ color: "orange", margin: "10px auto" }} htmlFor="important">Priorytet</label>
                 <br />
                 <label htmlFor="date"></label>
                 <input type="date" value={this.state.date} min={this.minDate} max={maxDate} onChange={this.handleDate} />
